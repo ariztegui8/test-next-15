@@ -1,7 +1,7 @@
-// stores/formStore.ts
+
 import { create } from 'zustand';
 
-interface FormState {
+type FormState = {
   form: {
     nombre: string;
     apellido: string;

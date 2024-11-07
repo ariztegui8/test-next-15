@@ -4,7 +4,7 @@ import useFormStore from '@/stores/formStore';
 import { useRouter } from 'next/navigation';
 
 const Formulario: React.FC = () => {
-  const { form, error, setForm, setError, resetForm } = useFormStore();
+  const { form, error, setForm, setError } = useFormStore();
 
   const { nombre, apellido, email } = form;
 
@@ -24,8 +24,9 @@ const Formulario: React.FC = () => {
       return;
     }
     setError(false);
-    resetForm();
     router.push('/');
+    // resetForm();
+   
   };
 
   return (
